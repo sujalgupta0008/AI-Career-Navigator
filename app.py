@@ -47,7 +47,7 @@ st.markdown(
         <span style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:0.08em;
             color:var(--mint);text-transform:uppercase;border:1px solid rgba(61,220,151,0.3);
             background:rgba(61,220,151,0.06);padding:5px 12px;border-radius:99px;">
-            ● Powered by Gemini AI
+            ● Powered by Groq AI
         </span>
     </div>
     <h1 style="font-family:'Space Grotesk';font-size:38px;margin:12px 0 4px;">
@@ -193,7 +193,7 @@ if analyze_btn:
             target_role
         )
 
-        with st.spinner("Gemini is analyzing your career profile..."):
+        with st.spinner("Groq is analyzing your career profile..."):
             try:
                 ai_report = generate_career_plan(profile)
             except RuntimeError as e:
@@ -282,7 +282,7 @@ if analyze_btn:
             st.subheader("Job Description Match Analyzer")
 
             if job_description:
-                with st.spinner("Gemini is analyzing your JD match..."):
+                with st.spinner("Groq is analyzing your JD match..."):
                     try:
                         jd_report = generate_jd_match_analysis(profile, job_description)
                     except RuntimeError as e:
