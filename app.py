@@ -15,6 +15,24 @@ from utils.theme import (
     extract_first_number,
 )
 
+# Initialize session state keys with default values
+if "name" not in st.session_state:
+    st.session_state.name = ""
+if "degree" not in st.session_state:
+    st.session_state.degree = ""
+if "year" not in st.session_state:
+    st.session_state.year = "3rd Year"
+if "target_role" not in st.session_state:
+    st.session_state.target_role = "Data Analyst"
+if "skills" not in st.session_state:
+    st.session_state.skills = ""
+if "projects" not in st.session_state:
+    st.session_state.projects = ""
+if "career_goal" not in st.session_state:
+    st.session_state.career_goal = ""
+if "job_description" not in st.session_state:
+    st.session_state.job_description = ""
+
 st.set_page_config(
     page_title="AI Career Navigator",
     page_icon="🎯",
@@ -83,9 +101,10 @@ with st.sidebar:
             "The candidate should be able to analyze datasets, prepare reports, and communicate "
             "findings clearly."
         )
+        st.rerun()
 
-    name = st.text_input("Name", value=st.session_state.get("name", ""))
-    degree = st.text_input("Degree / Course", value=st.session_state.get("degree", ""))
+    name = st.text_input("Name", key="name")
+    degree = st.text_input("Degree / Course", key="degree")
 
     year_options = ["1st Year", "2nd Year", "3rd Year", "4th Year", "Graduate"]
     default_year = st.session_state.get("year", "3rd Year")
@@ -96,7 +115,8 @@ with st.sidebar:
     year = st.selectbox(
         "Current Year",
         year_options,
-        index=year_options.index(default_year)
+        index=year_options.index(default_year),
+        key="year"
     )
 
     role_options = [
@@ -115,7 +135,8 @@ with st.sidebar:
     target_role = st.selectbox(
         "Target Role",
         role_options,
-        index=role_options.index(default_role)
+        index=role_options.index(default_role),
+        key="target_role"
     )
 
 
@@ -123,28 +144,28 @@ st.subheader("Profile Details")
 
 skills = st.text_area(
     "Enter your skills",
-    value=st.session_state.get("skills", ""),
+    key="skills",
     placeholder="Example: Python, SQL, Excel, Power BI, Pandas, Statistics",
     height=120
 )
 
 projects = st.text_area(
     "Enter your projects",
-    value=st.session_state.get("projects", ""),
+    key="projects",
     placeholder="Example: Fraud Detection, SmartLend, Sales Dashboard",
     height=120
 )
 
 career_goal = st.text_area(
     "Career Goal",
-    value=st.session_state.get("career_goal", ""),
+    key="career_goal",
     placeholder="Example: I want to become a Data Analyst and get an internship.",
     height=100
 )
 
 job_description = st.text_area(
     "Paste Job / Internship Description",
-    value=st.session_state.get("job_description", ""),
+    key="job_description",
     placeholder="Paste internship or job description here to check your match score.",
     height=150
 )
@@ -317,7 +338,7 @@ if analyze_btn:
             accents = ["var(--mint)", "var(--violet)", "var(--amber)", "var(--mint)"]
 
             for w_idx, (week, tasks) in enumerate(roadmap_tasks.items()):
-                with st.container(border=True):
+                with st.container():
                     week_completed = 0
 
                     st.markdown(

@@ -230,7 +230,7 @@ def render_report_sections(markdown_text: str):
 
     for i, (num, title, body) in enumerate(sections):
         color = accents[i % len(accents)]
-        with st.container(border=True):
+        with st.container():
             _eyebrow(f"{num + '. ' if num else ''}{title}", color=color)
             st.markdown(body)
 
