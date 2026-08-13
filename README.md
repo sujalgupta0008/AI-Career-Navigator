@@ -4,12 +4,12 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.0%2B-red)](https://streamlit.io/)
-[![Google Gemini](https://img.shields.io/badge/Google-Gemini%20API-4285F4)](https://ai.google.dev/)
+[![Groq API](https://img.shields.io/badge/Groq-API-FF6B35)](https://groq.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](#license)
 
 </div>
 
-**AI Career Navigator** is an intelligent career guidance platform powered by Google Gemini API. It helps students and early-career professionals analyze their career readiness, identify skill gaps, match their profile with job descriptions, and follow a personalized 30-day preparation roadmap.
+**AI Career Navigator** is an intelligent career guidance platform powered by Groq API. It helps students and early-career professionals analyze their career readiness, identify skill gaps, match their profile with job descriptions, and follow a personalized 30-day preparation roadmap.
 
 ---
 
@@ -23,7 +23,7 @@
 - [Configuration](#-configuration)
 - [Usage](#-usage)
 - [Project Structure](#-project-structure)
-- [Gemini API Integration](#-gemini-api-integration)
+- [Groq API Integration](#-groq-api-integration)
 - [Contributing](#-contributing)
 - [License](#license)
 
@@ -42,7 +42,7 @@ Many students and early-career professionals face challenges:
 
 ## Solution
 
-AI Career Navigator leverages **Google Gemini API** to provide:
+AI Career Navigator leverages **Groq API** to provide:
 - **Personalized Career Analysis** based on student profile, skills, and goals
 - **Skill Gap Identification** highlighting missing technical and soft skills
 - **Job Match Analysis** comparing profile with job descriptions
@@ -81,7 +81,7 @@ AI Career Navigator leverages **Google Gemini API** to provide:
 |-----------|-----------|
 | **Backend** | Python 3.8+ |
 | **Frontend** | Streamlit |
-| **AI Engine** | Google Gemini API |
+| **AI Engine** | Groq API |
 | **Data Processing** | Pandas |
 | **Visualization** | Matplotlib |
 | **Environment** | python-dotenv |
@@ -93,7 +93,7 @@ AI Career Navigator leverages **Google Gemini API** to provide:
 ### Prerequisites
 - Python 3.8 or higher
 - pip (Python package manager)
-- Google Gemini API key ([Get one here](https://ai.google.dev/))
+- Groq API key ([Get one here](https://console.groq.com/))
 
 ### Step-by-Step Setup
 
@@ -128,12 +128,12 @@ AI Career Navigator leverages **Google Gemini API** to provide:
    cp .env.example .env
    ```
 
-2. **Add your Gemini API key**
+2. **Add your Groq API key**
    ```
-   GROQ_API_KEY=your_google_gemini_api_key_here
+   GROQ_API_KEY=your_groq_api_key_here
    ```
 
-   > **Note:** Get your free API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+   > **Note:** Get your free API key from [Groq Console](https://console.groq.com/)
 
 3. **Verify setup**
    ```bash
@@ -200,9 +200,9 @@ AI-Career-Navigator/
 
 ---
 
-## 🧠 Gemini API Integration
+## 🧠 Groq API Integration
 
-The platform utilizes Google Gemini API for:
+The platform utilizes Groq API for:
 
 | Feature | AI Task |
 |---------|---------|
@@ -252,7 +252,7 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 ## 🙏 Acknowledgments
 
-- Google Gemini API for AI capabilities
+- Groq API for AI capabilities
 - Streamlit for the web framework
 - Open-source community
 
