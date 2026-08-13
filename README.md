@@ -1,67 +1,182 @@
 # 🎯 AI Career Navigator
 
-AI Career Navigator is a Gemini-powered career guidance platform that helps students and early-career professionals analyze their career readiness, identify skill gaps, match their profile with job descriptions, and follow a personalized 30-day preparation roadmap.
+<div align="center">
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.0%2B-red)](https://streamlit.io/)
+[![Google Gemini](https://img.shields.io/badge/Google-Gemini%20API-4285F4)](https://ai.google.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green)](#license)
+
+</div>
+
+**AI Career Navigator** is an intelligent career guidance platform powered by Google Gemini API. It helps students and early-career professionals analyze their career readiness, identify skill gaps, match their profile with job descriptions, and follow a personalized 30-day preparation roadmap.
 
 ---
 
-## 🚀 Project Overview
+## 📋 Table of Contents
 
-Many students are confused about which career path to choose, what skills they are missing, and how to prepare for internships or entry-level jobs.
+- [Problem Statement](#problem-statement)
+- [Solution](#solution)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Gemini API Integration](#-gemini-api-integration)
+- [Contributing](#-contributing)
+- [License](#license)
 
-AI Career Navigator solves this problem by using Google Gemini API to generate personalized career guidance based on:
+---
 
-- Student profile
-- Degree/course
-- Current skills
-- Projects
-- Career goal
-- Target job role
-- Job/internship description
+## Problem Statement
 
-The platform gives a structured career report, skill readiness score, job description match analysis, roadmap tracker, and downloadable report.
+Many students and early-career professionals face challenges:
+- 🤔 Uncertainty about suitable career paths
+- ❌ Unaware of missing technical and soft skills
+- 📊 Lack of structured preparation guidance
+- 🎯 No personalized roadmap for career development
+- 📄 Limited resources for resume and interview prep
+
+---
+
+## Solution
+
+AI Career Navigator leverages **Google Gemini API** to provide:
+- **Personalized Career Analysis** based on student profile, skills, and goals
+- **Skill Gap Identification** highlighting missing technical and soft skills
+- **Job Match Analysis** comparing profile with job descriptions
+- **30-Day Roadmap** with actionable learning tasks
+- **Improvement Suggestions** for resume, LinkedIn, and GitHub
+- **Interview Preparation** with curated questions
+- **Professional Reports** ready for download
 
 ---
 
 ## ✨ Features
- 
-- Student profile input
-- Target role selection
-- Gemini-powered career guidance report
-- Skill readiness score
-- Skill gap analysis
-- Job Description Match Analyzer
-- 30-Day Career Roadmap Tracker
-- Downloadable career report
-- Sample profile for quick demo
 
----
+### Core Features
+- ✅ **Student Profile Input** - Comprehensive profile creation
+- ✅ **Target Role Selection** - Choose desired career paths
+- ✅ **AI-Powered Analysis** - Gemini-generated career insights
+- ✅ **Skill Readiness Score** - Quantified assessment of readiness
+- ✅ **Skill Gap Analysis** - Detailed missing skills report
+- ✅ **Job Match Analyzer** - Compare profile with job descriptions
+- ✅ **30-Day Roadmap Tracker** - Step-by-step learning plan
+- ✅ **Downloadable Reports** - Professional PDF export
+- ✅ **Demo Profile** - Quick start with sample data
 
-## 🧠 Gemini API Usage
-
-The project uses Google Gemini API to generate:
-
-- Personalized career analysis
-- Best-fit job roles
-- Missing technical skills
-- Missing soft skills
-- Resume improvement suggestions
-- LinkedIn improvement suggestions
-- GitHub improvement suggestions
-- 30-day learning roadmap
-- Project recommendations
-- Interview preparation questions
-- Job description match report
+### Advanced Capabilities
+- 📈 Resume optimization suggestions
+- 🔗 LinkedIn profile enhancement tips
+- 💻 GitHub portfolio recommendations
+- 🎤 Interview preparation questions
+- 🗺️ Personalized learning roadmap
 
 ---
 
 ## 🛠 Tech Stack
 
-- Python
-- Streamlit
-- Google Gemini API
-- Pandas
-- Matplotlib
-- python-dotenv
+| Component | Technology |
+|-----------|-----------|
+| **Backend** | Python 3.8+ |
+| **Frontend** | Streamlit |
+| **AI Engine** | Google Gemini API |
+| **Data Processing** | Pandas |
+| **Visualization** | Matplotlib |
+| **Environment** | python-dotenv |
+
+---
+
+## 📦 Installation
+
+### Prerequisites
+- Python 3.8 or higher
+- pip (Python package manager)
+- Google Gemini API key ([Get one here](https://ai.google.dev/))
+
+### Step-by-Step Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sujalgupta0008/AI-Career-Navigator.git
+   cd AI-Career-Navigator
+   ```
+
+2. **Create and activate virtual environment**
+   ```bash
+   # Windows
+   python -m venv .venv
+   .venv\Scripts\activate
+   
+   # macOS/Linux
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## ⚙️ Configuration
+
+1. **Create `.env` file** in the project root
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Add your Gemini API key**
+   ```
+   GROQ_API_KEY=your_google_gemini_api_key_here
+   ```
+
+   > **Note:** Get your free API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+3. **Verify setup**
+   ```bash
+   python app.py
+   ```
+
+---
+
+## 🚀 Usage
+
+### Start the Application
+```bash
+streamlit run app.py
+```
+
+The application will open in your default browser at `http://localhost:8501`
+
+### Using the Platform
+
+1. **Enter Your Profile**
+   - Name and contact details
+   - Current degree and graduation date
+   - Technical skills and proficiency levels
+   - Projects and achievements
+   - Career aspirations
+
+2. **Select Target Role**
+   - Choose desired job role
+   - Input job description (optional)
+
+3. **Generate Analysis**
+   - Click "Analyze" to get AI insights
+   - Review career readiness score
+   - Check skill gaps and recommendations
+
+4. **Follow Your Roadmap**
+   - Track 30-day learning milestones
+   - Complete suggested tasks
+   - Monitor progress
+
+5. **Download Report**
+   - Export professional career report
+   - Share with mentors or recruiters
 
 ---
 
@@ -70,13 +185,85 @@ The project uses Google Gemini API to generate:
 ```text
 AI-Career-Navigator/
 │
-├── app.py
-├── .env
-├── requirements.txt
-├── README.md
-├── .gitignore
+├── app.py                      # Main Streamlit application
+├── requirements.txt            # Python dependencies
+├── README.md                   # Project documentation
+├── .env.example               # Environment variables template
+├── .gitignore                 # Git ignore rules
 │
 └── utils/
-    ├── gemini_helper.py
-    ├── scoring.py
-    └── report_generator.py
+    ├── gemini_helper.py       # Gemini API integration
+    ├── scoring.py             # Skill scoring algorithms
+    ├── report_generator.py    # Report generation logic
+    └── theme.py               # UI theme customization
+```
+
+---
+
+## 🧠 Gemini API Integration
+
+The platform utilizes Google Gemini API for:
+
+| Feature | AI Task |
+|---------|---------|
+| Career Analysis | Personalized insights based on profile |
+| Job Matching | Compare skills with job requirements |
+| Skill Gap | Identify missing technical skills |
+| Soft Skills | Recommend behavioral improvements |
+| Resume Tips | Enhance resume content |
+| LinkedIn Optimization | Profile enhancement suggestions |
+| GitHub Portfolio | Project and repo recommendations |
+| Learning Roadmap | 30-day structured learning plan |
+| Interview Prep | Curated technical & HR questions |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Guidelines
+- Write clean, readable code
+- Add comments for complex logic
+- Update documentation as needed
+- Test your changes before submitting PR
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License** - see the LICENSE file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Sujal Gupta**
+- GitHub: [@sujalgupta0008](https://github.com/sujalgupta0008)
+- Portfolio: [Your Portfolio]
+
+---
+
+## 🙏 Acknowledgments
+
+- Google Gemini API for AI capabilities
+- Streamlit for the web framework
+- Open-source community
+
+---
+
+## 📞 Support
+
+For questions or issues, please:
+- Open an [Issue](https://github.com/sujalgupta0008/AI-Career-Navigator/issues)
+- Reach out via GitHub
+
+---
+
+**Last Updated:** August 2026
