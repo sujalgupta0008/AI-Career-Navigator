@@ -192,7 +192,7 @@ AI-Career-Navigator/
 ├── .gitignore                 # Git ignore rules
 │
 └── utils/
-    ├── gemini_helper.py       # Gemini API integration
+    ├── gemini_helper.py       # Groq API integration
     ├── scoring.py             # Skill scoring algorithms
     ├── report_generator.py    # Report generation logic
     └── theme.py               # UI theme customization
@@ -246,7 +246,7 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 **Sujal Gupta**
 - GitHub: [@sujalgupta0008](https://github.com/sujalgupta0008)
-- Portfolio: [Your Portfolio]
+- Portfolio: https://portfolio-gold-theta-44.vercel.app/
 
 ---
 
